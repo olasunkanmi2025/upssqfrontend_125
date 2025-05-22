@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input{
+    display: block;
+    margin-top: 10px;
+    max-width: 240px;
+    border: none;
+    padding: 1rem;
+}
+input[type="text"]{
+border-bottom: 1px solid red;
+}
+input[type="email"]{
+    border-bottom: 1px solid blue;
+}
+input.focus{
+    outline: none;
+    background-color: aqua;
+}
+input.hover{
+    border-bottom: 1px solid purple;
+    width: 272px;
+}

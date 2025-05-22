@@ -13,6 +13,22 @@
    5. Heros section styles
    6. Footer styles
 */
-* {
-   background-color: red;
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+input{
+   display: block;
+   margin-top: 10px;
+   max-width: 249px;
+   border: none;
+   padding: 1rem;
+}
+input[type="text"]{
+   width: 100%;
+   border-bottom:1px solid red;
+}
+input[type="email"]{
+   border: none solid blue; 
 }
