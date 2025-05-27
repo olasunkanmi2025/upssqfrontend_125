@@ -3,10 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>document</title>
+    <title>css-overflow</title>
+    <style>
+        span{
+            color: red;
+        }
+        p~div{
+            overflow-x: hidden;
+            overflow-y: scroll;
+            background-color: coral;
+            width: 200px;
+            height: 65px;
+        }
+    </style>
 </head>
 <body>
-    <h1>overflow</h1>
+    <header>
+    <h1>css overflow</h1>
     <nav class="nav" id="navid">
     <ul class="navlist">
         <li class="navitem"><a href="visible.html" class="navlink">visible</a></li>
@@ -15,6 +28,21 @@
         <li class="navitem"><a href="auto.html" class="navlink">auto</a></li>
     </ul>
     </nav>
+    </header>
+    <section class="main section">
+    <h1>overflow property description</h1>
+    <p>The overflow property specify whether to click the content or too add scroll bars when the content of an element is to big to fit the specify area</p>
+    <p>The overflow property has the following properties: visible, scroll, hidden, auto</p>
+    <p><strong><i>Note: The overflow property only works for bloch elements with specify height. In oxxlions is the name of an operating system on a mac computer and scroll bars are hidden by default on this operating system and only shows when been used even if the overflow is set on scroll</i></strong></p>
+    </section>
+    <section>
+        <h2>overflow-x overflow-y</h2>
+        <p>The <span>overflow-x</span>and overflow-y properties specifies whether to change the overflow of content just vertically or horizontally or both </p>
+        <p><span>overflow-x</span>specifies what to do with the left/right edges of the contents.</p>
+        <p>overflow-x specifies what to do with the top/buttom edges of the contents.</p>
+        <br><br>
+        <div class="content">You can use the overflow property when you want to have better control of the layout. The overflow property specify what happens if the contents overflow an element box</div>
+    </section>
 
 </body>
 </html>
