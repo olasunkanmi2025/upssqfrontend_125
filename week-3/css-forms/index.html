@@ -5,38 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Css-forms</title>
     <style>
-        .container-grey{
-            background-color: grey;
-            width: 250px;
-            padding: 20px;
-
-
+        #inputelements{
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
         }
-        .container-light-border-left{
-            background-color: blue;
-            padding: 20px;
-            margin: 20px 10px 
+        #inputelements tr td{
+            border: 1px solid #dddddd;
+            padding: 8px;
+        }
+        #inputelements  th{
+            border: 1px solid #dddddd;
+            padding: 8px;
+        }
+        #inputelements  th{
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA60;
+            color: white;
+        }
+        #inputelement tr:nth-child(even){
+            background-color: #f2f2f2;
+            padding: 8px;
+        }
+        #inputelements tr:hover{
+            background-color: #dddddd;
         }
     </style>
 </head>
 <body>
     <h1>Html Form</h1>
     <p>An html form is use to collect user input. The user input is most often sent to the server for processing </p>
-    <div class="container-grey">
-        <div class="container-light-border-left">
-            <form action="#" method="post">
-                <label for="name">name:</label>
-                <br>
-                <input type="text" id="name" name="name">
-                <br>
-                <br>
-                <label for="email">email:</label>
-                <br>
-                <input type="email" id="email" name="email">
-                <label for="password">password:</label>
-            </form>
-        </div>
-    </div>
+    <hr>
+    <h3>The form element</h3>
+    <p>The form element is used to create an html form for the user input: </p>
+    <p>The form  element is a container for different type of input element such as text fills, check buttons, radio buttons and submit button </p>
+    <hr>
+    <h3>The input element</h3>
+    <p>The html input element is the most use element</p>
+    <table id="inputelements">
+        <tr>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Input type text</td>
+            <td>It displays the single line text fill</td>
+        </tr>
+        <tr>
+            <td>Input type radio</td>
+            <td>It defines a radio button input fill that allows selections of one option from a set</td>
+        </tr>
+        <tr>
+            <td>Check box</td>
+            <td>Define a check box page that allows selection of multiple option from a set</td>
+        </tr>
+        <tr>
+            <td>Input Type Number</td>
+            <td>This define an input fill from entering a number </td>
+        </tr>
+        <tr>
+            <td>Input Type Email</td>
+            <td>Defines an input fill for entering an email address</td>
+        </tr>
+        <tr>
+            <td>Input type password</td>
+            <td>Defines a password input fill</td>
+        </tr>
+        <tr>
+            <td>Input type file</td>
+            <td>This allow the upload of a file from ur computer</td>
+        </tr>
+    </table>
+   
     
 </body>
 </html>
