@@ -4,6 +4,32 @@
         <meta charset="UTF-8">
         <meta name="viewport"content="width=device-widthinitial-scale=1-0">
         <title>resposive-web-design (RWD)</title>
+        <style>
+            .table{
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+                margin-right: 5px;
+            }
+            .table tr td{
+                border: 1px solid green;
+                padding: 8px;
+            }
+            .table th{
+                border: 1px solid green;
+                padding: 8px;
+            }
+            .table th{
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: aqua;
+                color: white;
+            }
+            .table tr{
+                background-color: aquamarine;
+            }
+        </style>
     </head>
     <body>
         <h1 class="main-heading">resposive-web-design(RWD)</h1>
@@ -25,7 +51,7 @@
             <li class="list-item">
                 <div class="list-item-content">
                     <h4 class="heading-4">Media query:</h4>
-                    <p>Css rules that apply styles based on the devices characteristics</p>
+                    <p>Css rules that apply styles based on the devices characteristics such as screen weight height resolution or orientation</p>
                     <h5>Example:</h5>
                     <pre><code>
                         @media (max-width: 768px) {
@@ -34,11 +60,70 @@
                                       }
                                  }
                     </code></pre>
-                    <h4 class="heading-4">Mobile file approach</h4>
+                    <h4 class="heading-4">Mobile-first approach:</h4>
                     <p>Design start with the smallest screen size and scales up, ensuring a good user experience on mobile design first </p>
                 </div>
             </li>
         </ol>
+        <h2 class="grid-option">Grid options in resposive design</h2>
+        <ul class="grid-option-list">
+            <li class="grid-option-items">
+                <h4 class="heading-4">Css grid layout:</h4>
+                <p>Allows for complex layouts with rows and columns making it easier to create resposive design</p>
+            </li>
+            <li class="grid-option-items">
+                <h4 class="heading-4">Flexbox:</h4>
+                <p>Provide a one dimensional layout model that is great for aligning items in a rows or columns making it easier to create flexible layouts</p>
+            </li>
+            <li class="grid-option-items">
+                <h4 class="heading-4">Frameworks:</h4>
+                <p>Framework like bootstrap, bulma, w3css, tailwind css and foundation provide prebuilt resposive grid systems that can be easily integrayed into projects.</p>
+            </li>
+        </ul>
+        <table class="table">
+            <tr>
+                <th>Screen size</th>
+                <th>Screen size code</th>
+                <th>Class prefix</th>
+                <th>Column count</th>
+            </tr>
+            <tr>
+                <td>(less than 576px)</td>
+                <td>Extra small(xx)</td>
+                <td>None</td>
+                <td>1-12</td>
+            </tr>
+            <tr>
+                <td>(>=576px)</td>
+                <td>Small(sm)</td>
+                <td>.col-sn-</td>
+                <td>1-12</td>
+            </tr>
+            <tr>
+                <td>(>=786px)</td>
+                <td>Medium(md)</td>
+                <td>.col-md-</td>
+                <td>1-12</td>
+            </tr>
+            <tr>
+                <td>(>=992px)</td>
+                <td>Large(lg)</td>
+                <td>.col-lg-</td>
+                <td>1-12</td>
+            </tr>
+            <tr>
+                <td>(>=1200px)</td>
+                <td>Extra Large(xl)</td>
+                <td>.col-xl-</td>
+                <td>1-12</td>
+            </tr>
+            <tr>
+                <td>(>=1400px)</td>
+                <td>Extra Extra Large(xxl)</td>
+                <td>.col-xxl-</td>
+                <td>1-12</td>
+            </tr>
+        </table>
     </body>
 
 </html>
