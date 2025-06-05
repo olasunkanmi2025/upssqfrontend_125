@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    align-items: center;
+    background-color: black;
+}
+h2{
+    color: white;
+    padding: 1em; 
+}
+.grid-list{
+   display: flex; 
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+li{
+    list-style: none;
+    padding: 8px;
+}
+a{
+    text-decoration: none;
+}
+.flex-grid{
+    display: flex;
+    align-items: stretch;
+}
+.flex-grid>div{
+    text-align: center;
+    margin: 10px;
+    width: 100px;
+    color: white;
+}
