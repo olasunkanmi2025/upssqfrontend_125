@@ -37,3 +37,59 @@ a{
     width: 100px;
     color: white;
 }
+.container{
+    display: grid;
+    grid-template-areas: "heading" "sidebar" "content" "footer";
+    grid-template-columns: 1fr;
+    gap: 5px;
+    background-color: grey;
+    padding: 5px;
+    max-width: 100%;
+    margin: auto;
+}
+.container > div{
+    background-color: lightgrey;
+    padding: 10px;
+}
+.container > div.heading{
+    grid-area: heading;
+    text-align: center;
+}
+.container > div.sidebar{
+    grid-area: sidebar;
+}
+.container > div.content{
+    grid-area: content;
+}
+.container > div.footer{
+    grid-area: footer;
+}
+@media(min-width: 768px){
+    .container{
+    display: grid;
+    grid-template-areas: "heading heading" "sidebar content" "footer footer";
+    grid-template-columns: 1fr;
+    gap: 5px;
+    background-color: grey;
+    padding: 5px;
+    max-width: 100%;
+    margin: auto;
+    }
+    .container > div.sidebar{
+        grid-area: sidebar;
+        padding: 10px;
+    }
+}
+.container-fluid{
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    background-color: grey;
+    padding: 10px;
+}
+.container-fluid > div{
+    background-color: lightgrey;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+}
