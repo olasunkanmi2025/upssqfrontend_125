@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<style>
+    button{
+        box-shadow: none;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 10px;
+        border: 2px solid black;
+        background-color: brown;
+        color: lightblue;
+        cursor: pointer;
+        border-radius: 2px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+</style>
+<body>
+    <header>
+     <h2>What is javascript</h2>
+    </header>
+     <h3>Learning Objectives</h3>
+
+     <ul>
+        <li>What is javascript and how does it fit</li>
+        <li> What can you do with Javascript</li>
+        <li>Adding javascript to a web page</li>
+     </ul>
+
+     <h3>A high level definition </h3>
+     <p>Javascript is a scripting or programming language that allows you to implement complex features on web pages. Everytime a web page does more than just sit there to display statis information, popups, it is most likely that javascript is involved. Javascript ia a third layers of the three standard technologies, the other two include html and css</p>
+     
+     <ul>
+        <li>
+            <h4>Html</h4>
+            <p> Html is a markuplanguage that we use to structure and give meaning to our web content for examole, defining paragraphs, heading and data tables for embedding </p>
+        </li>
+        <li>
+            <h4>Css</h4>
+            <p>css ia a language of style rules that we use to apply styling to our html content for example, seting background colors and font</p>
+        </li>
+        <li>
+            <h4>Javascript</h4>
+            <p>javascript is a scripting laanguage that enable you to create dynamically updating content control multi-media, animate images and pretty much everything else</p>
+        </li>
+    </ul>
+    <p>Thre three layer build on top one another</p>
+    <button type="button">Player 1: Awesome</button>
+    <hr>
+    <h3>Things Javascript can do</h3>
+    <p>The core client javascript consists of common programming features that allow you to do things like:</p>
+    <ul>
+        <li>You can store useful values inside variables; in the above example, for instance, it ask for a new name to be enter then store that name in the variables called name </li>
+        <li>Operations on pieces of text (known as strings in programming) in the aove example, we take the string player 1 and join it to the name variable to create the complete text label "player 1:awesome"</li>
+        <li>Running codes in respond to certain events occuring on a webpage. we use a click event in our example above to detect when a label is click and then run the code that update the label</li>
+    </ul>
+    <p>Certain functionality are built on top of javascript language. and these are called application programming interface(API) this API gives extra super power to your javascriptcode</p>
+    <hr>
+
+    <h3>What is Javascript doing in your webpage</h3>
+    <p>What happens when you load a webpage in your broswer. when you load a webpage in your browser you are running your(html,css and javascript) inside am execution environment (the browser tab). this is like a factory that takes in raw material(the code) and output a product(the webpage)</p>
+    <p>Very common use of javascript is to modify html and css to update user interface by mean of document object model that we discuss above</p>
+
+    <h3>Browser Security</h3>
+    <p>Each browser tab has its own separate bucket for running code (this bucket are called execution environment in technical terms) this means that in most cases the code in each tab is run completely separately and the code in one tab can not directly affect the code in another tab. </p>
+
+    <h3>Javascript Runnibg Order</h3>
+    <p>When the browser encounter a block of javascript, it generally runs it in order from top to bottom. this means that you need to be careful that what order you put in</p>
+    <p>In the first example, the code block is called "update name" parenthesis(this type of reuseable code are called functions)  this code block ask auser for a new name and insert the new name into the text of the button. when we store a reference to a button uding document.query selectors and attaches an event listener to it using "add event listener" so that when the button is click, the update name functions is wrong</p>
+    <p>if we were swap the other of the const button=... and button.add event listener(..)the code will not work.instead you will get an error return in browser developer concept and the error will say uncot referenceError:can not access button before initialization. this means that the button has not been initialized yet so we can not add an event listener to it </p>
+    <br>
+    <div> <strong>Note:it is not always true that javascript runs in order from top to bottom due to behaviours like hoisting but from now bear in mind that items need to be define before you see them</strong></div>
+    
+    <script>
+        function updateName() {
+  const name = prompt("Enter a new name");
+  button.textContent = `Player 1: ${name}`;
+}
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", updateName);
+    </script>
+</body>
+</html>
