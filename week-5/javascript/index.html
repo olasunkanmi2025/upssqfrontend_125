@@ -18,6 +18,13 @@
         letter-spacing: 3px;
         text-transform: uppercase;
     }
+    .note{
+        background-color: blueviolet;
+        padding: 15px;
+        border-left: 3px solid black;
+        border-radius: 5px;
+        margin: 10px;
+    }
 </style>
 <body>
     <header>
@@ -68,13 +75,19 @@
     <h3>Browser Security</h3>
     <p>Each browser tab has its own separate bucket for running code (this bucket are called execution environment in technical terms) this means that in most cases the code in each tab is run completely separately and the code in one tab can not directly affect the code in another tab. </p>
 
-    <h3>Javascript Runnibg Order</h3>
+    <h3>Javascript Running Order</h3>
     <p>When the browser encounter a block of javascript, it generally runs it in order from top to bottom. this means that you need to be careful that what order you put in</p>
     <p>In the first example, the code block is called "update name" parenthesis(this type of reuseable code are called functions)  this code block ask auser for a new name and insert the new name into the text of the button. when we store a reference to a button uding document.query selectors and attaches an event listener to it using "add event listener" so that when the button is click, the update name functions is wrong</p>
     <p>if we were swap the other of the const button=... and button.add event listener(..)the code will not work.instead you will get an error return in browser developer concept and the error will say uncot referenceError:can not access button before initialization. this means that the button has not been initialized yet so we can not add an event listener to it </p>
     <br>
-    <div> <strong>Note:it is not always true that javascript runs in order from top to bottom due to behaviours like hoisting but from now bear in mind that items need to be define before you see them</strong></div>
+    <div class="note"> <strong>Note:it is not always true that javascript runs in order from top to bottom due to behaviours like hoisting but from now bear in mind that items need to be define before you see them</strong></div>
     
+    <h3>interpreted VS compiled code</h3>
+    <p>You might hear the term interpreted and compiled in the context of programming. In interpreted languages the code is run from top to bottom and the result of running the code is immediately return. You dont have to transform the code into a different forms before the browser runs it. The code is receive in its programmer friendly text font and processed directly from that</p>
+    <br>
+    <p>Compiled languages on the other hands are transform(compiled) into another form before they are run by the computer e.g C/C++ are compiled into machine code that is then run by the computer. The program is executed from a binary format, which was generated from the original program source code </p>
+    <br>
+    <p>Javascript is a light weight interpreted programming language. The web browser receive the javascript code in its original text form and runs the script from that. From a technical stand point, most modeling javascript interpreters actually used a technic called just-in-time compiling(JIT) to improve performance ; The javascript source code get compiled into a faster binary format while the script is been used so that it can be run as quickly aspossible. However javascriptis still considered an interpreted language since the compilation is handled at run time rather than ahead of time</p>
     <script>
         function updateName() {
   const name = prompt("Enter a new name");
