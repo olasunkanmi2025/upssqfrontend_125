@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <script type="module" src="/week-5/javascript/guessing-game/index.js"></script>
+    <style>
+        .bg-light{
+            background-color: rgba(153, 153, 250,);
+        }
+        .max-width{
+            max-width: 30em;
+        }
+        .border-radius{
+            border-radius: 10px;
+        }
+        .btn{
+            max-width: 100%;
+            padding: 1em 2.5em;
+            outline: none;
+        }
+        .border-none{
+            border: none;
+        }
+        .width{
+            max-width: 100%;
+            min-width: 150px;
+        }
+        .padding{
+            padding: 1rem;
+        }
+        .margin-block{
+            margin: 1rem;
+        }
+        .margin-inline{
+            margin: 1rem;
+        }
+        .text-light{
+            color: white;
+        }
+        .text-dark{
+            color: black;
+        }
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .text-center{
+            text-align: center;
+        }
+        .text-left{
+            text-align: left;
+        }
+        .text-right{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h2>A first flash into Javascript </h2>
+    <p>we are going to dive dip into javascript with a single game that give you idea of our javascript works and what writing javascript feels like. In subsequently, we will revisit all the features shown so don't worry if you don't all at immediately  </p>
+    <p>Note: Many of the code features you will see in javascript are the same as in other programming <span> - </span> functions, loops etc. the code syntax looks different, but the concept are the same</p>
+    <br>
+    <h3>Number Guessing Game</h3>
+    <p>We have selected arandom number between 1 and 100. see if you can guess it in ten turns or fewer. we will tell you if your guess was too high or too low</p>
+    <br>
+    <div class="form">
+        <label for="guessField"></label>
+        <input type="number" min="1" max="100" required id="guessField" class="guessField">
+        <input type="submit" value="submitGuess" class="guessSubmit">
+    </div>
+    <div class="resultParas">
+        <p class="guesses"></p>
+        <p class="lastResults"></p>
+        <p class="lowOrHigh"></p>
+    </div>
+    
+</body>
+</html>

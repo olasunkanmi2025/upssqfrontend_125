@@ -37,7 +37,23 @@
     <p><strong>Please in your life, don't try this. It is bad practice to pollute your html with javascript and it is inefficient</strong> <span> - </span> you have to include the onclick ="createParagraph" on every button you want the javascript to apply to</p>
     <br>
     <h3>Using addEventListener</h3>
-    <p>Instead of including javascript in your html </p>
-    <button onclick="createParagraph">Click Me</button>  
+    <p>Instead of including javascript in your html, use a pure javascript construct. The querySelectorAll Function allow you to select all the buttons on the page. You can then look through the button assigning an handler for each using addEventListener functions </p>
+    <hr>
+    <br>
+    <h3>Script Loading Strategies</h3>
+    <p>All the html on the page is loading in the order in which it appear. If you are using javascript to manipulate on the page(or more accurately the DOM) your code won't work if the javascript is loaded and parsed before the html you are trying to do something to</p>
+    <br>
+    <p>There are a few different strategies to make sure your javascript only run after your html is parsed </p>
+    <ul>
+        <li>In the external javascript above which you deleted, the script element is placed at the bottom of the body of the document and therefore only runs after the rest of the html is parsed</li>
+        <li>In the external javascript example above, the script element is placed in the head of the document before the html body is parsed. But because we are using type "module" the code is treated as a module and the browser wait for all html to be processed before executing javascript module. (you could also placed external script at the bottom of the body. but if there is a lot of html and the network is slow, it may be take time before the browser can even start fetching and loading the script, so placing external script at the head is better)</li>
+        <li>If you still want to use non module script in the document head, which could block the whole page from displaying and could cause error because it execute before the html is parse:
+            <ul>
+                <li>For external script, we should add the defer(or if you don't need the html to be ready they are synced attribute on the script element)</li>
+                <li>For internal script, you should wrap the code in a domContentLoadedEventlistener</li>
+            </ul>
+        </li>
+    </ul>
+    <button onclick="createParagraph ()">Click Me</button>  
 </body>
 </html>
