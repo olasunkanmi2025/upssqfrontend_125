@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Javascript to your page</title>
+    <script  src="index.js"></script>
+</head>
+<body>
+    <h2>How to add javascript to your page</h2>
+     <p>Javascript is applied to html page in a similar way to css. whereas css uses link elements to apply external style sheet and styles element to apply internal styles sheet to html, javascript only need one friend in the world of html <span>-</span>dis-script element</p>
+     <br>
+     <p>note: you can use scrinba setting up your javascript file interactive tutorial to learn how to add javascript to html file </p>
+     <br>
+  <h3>Internal Javascript</h3> 
+   <button>Click Me</button>
+    <ol>
+        <li></li>
+    </ol>
+    <hr>
+    <h3>External Javascript</h3>
+    <p>This works well but what if we will our javascript in an external styles. follows the steps below</p>
+    <ol>
+        <li>first create a new file in the same directory as your html file and called it index.js. make sure it has the ".js" file name extension as this is recognized</li>
+        <li>remove the current script element at the bottom of the body element just before the closing body tag </li>
+        <li>inside the index.js, Add the script</li>
+        <li>Save and refresh your browser</li>
+    </ol>
+    <hr>
+    <br>
+    <h3>In-line Javascript Handlers</h3>
+    <p>Sometimes javascript can be included inside the html element. this is called in-line javascript</p>
+    <br>
+    <p>This demonstrate exactly the same functionality as the previous two section except that the button element include an inline <i>onclick handler</i>to make the functions rules</p>
+    <br>
+    <p>Note: make sure to remove the type module in the script tag in the head element otherwise it wont work</p>
+    <p><strong>Please in your life, don't try this. It is bad practice to pollute your html with javascript and it is inefficient</strong> <span> - </span> you have to include the onclick ="createParagraph" on every button you want the javascript to apply to</p>
+    <br>
+    <h3>Using addEventListener</h3>
+    <p>Instead of including javascript in your html </p>
+    <button onclick="createParagraph">Click Me</button>  
+</body>
+</html>
